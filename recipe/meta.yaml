@@ -18,14 +18,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - types-paramiko
 
 test:
   commands:
     - test -f $SP_DIR/pysftp-stubs/__init__.pyi
+  requires:
+    - python {{ python_min }}
 
 
 about:
