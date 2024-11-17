@@ -1,5 +1,5 @@
 {% set name = "types-pysftp" %}
-{% set version = "0.2.17.20240106" %}
+{% set version = "0.2.17.20241117" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/types-pysftp-{{ version }}.tar.gz
-  sha256: bc10840e16edbc4a3876628fda3c0cc7da94769b849896e0bf85d4f178261136
+  sha256: 21661558a0122250bff5d24a405e93ec58fd68dc948be161503b41153874380f
 
 build:
   number: 0
@@ -18,14 +18,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - types-paramiko
 
 test:
   commands:
     - test -f $SP_DIR/pysftp-stubs/__init__.pyi
+  requires:
+    - python {{ python_min }}
 
 
 about:
