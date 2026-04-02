@@ -1,5 +1,5 @@
 {% set name = "types-pysftp" %}
-{% set version = "0.2.17.20250805" %}
+{% set version = "0.2.17.20260402" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9eb83d332cb50a4bf76689e29240b20ea83055fabb9590fc6b5a739976166f9a
+  sha256: e834b93207a9a56985ece4147f78a8fcedc5e14eddf58786cc5b93e58a92a4ad
 
 build:
   number: 0
