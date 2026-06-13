@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.2.17.20260518"
+  version: "0.2.17.20260613"
 
 package:
   name: types-pysftp
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/t/types-pysftp/types_pysftp-${{ version }}.tar.gz
-  sha256: 7d4452c60603b3db1f245077eb997bacb6654b242031c87bcc99cec81cca3d72
+  sha256: 29abc8091f96320ee3791ed013a13c88bb7332d2a644bf5abd208c0297d42c8b
 
 build:
   number: 0
